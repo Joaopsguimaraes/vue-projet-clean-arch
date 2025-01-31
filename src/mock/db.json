@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "id": "2bc8de85-3582-4d3b-b42d-70e2feca7c76",
+      "name": "Todo application",
+      "description": "A simple projeto with vue to show more details about clean arch",
+      "releaseDate": "2025-01-31",
+      "status": "pending",
+      "createdAt": "2025-01-31T20:41:08.372Z",
+      "updatedAt": "2025-01-31T20:41:08.372Z"
+    }
+  ],
+  "users": []
+}
