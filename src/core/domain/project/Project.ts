@@ -21,6 +21,14 @@ export class Project extends Entity {
     this._status = defaultStatus
   }
 
+  public makeProjectCompleted(): void {
+    if (this._status === ProjectStatusEnum.COMPLETED) {
+      throw new Error('Project is already completed')
+    }
+
+    this._status = ProjectStatusEnum.COMPLETED
+  }
+
   public get id(): string {
     return this._id
   }
@@ -67,5 +75,17 @@ export class Project extends Entity {
     }
 
     this._status = status
+  }
+
+  public toJSON(): Record<string, unknown> {
+    return {
+      id: this.id,
+      name: this._name,
+      description: this._description,
+      releaseDate: this._releaseDate.toISOString(),
+      status: this._status,
+      createdAt: this.createdAt,
+      updatedAt: this.updatedAt,
+    }
   }
 }

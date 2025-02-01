@@ -1,11 +1,11 @@
 import { inject, injectable } from 'inversify'
 import { TYPES } from '@/types/types'
 import type { Project } from '@/core/domain/project/Project'
-import type { ProjectGatewayHttp } from '@/core/infra/project/ProjectGateway'
+import type { IGateway } from '@/types/IRepository'
 
 @injectable()
 export class FindAllProjectUseCase {
-  constructor(@inject(TYPES.ProjectGatewayHttp) private projectGateway: ProjectGatewayHttp) {}
+  constructor(@inject(TYPES.ProjectGatewayHttp) private projectGateway: IGateway<Project>) {}
 
   async execute(): Promise<Project[]> {
     return this.projectGateway.findAll()

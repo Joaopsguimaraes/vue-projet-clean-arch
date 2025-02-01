@@ -7,7 +7,7 @@ import { FindProjectByIdUseCase } from './application/project/FindProjectByIdUse
 import { FindAllProjectUseCase } from './application/project/FindAllProjectUseCase'
 import { UpdateProjectUseCase } from './application/project/UpdateProjectUseCase'
 import { RemoveProjectUseCase } from './application/project/RemoveProjectUseCase'
-import { ProjectGatewayHttp } from './infra/project/ProjectGateway'
+import { ProjectGatewayHttp } from './infra/project/ProjectGatewayHttp'
 
 const container = new Container()
 
